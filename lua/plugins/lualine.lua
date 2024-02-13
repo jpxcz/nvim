@@ -12,6 +12,10 @@ return {
 						path = 1,
 					},
 				},
+                lualine_x = {
+                    'fileformat',
+                    'filetype',
+                },
 			},
 		})
 	end,
