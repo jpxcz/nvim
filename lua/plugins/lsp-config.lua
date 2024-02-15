@@ -17,6 +17,7 @@ return {
 					"jsonls",
 					"tsserver",
 					"gopls",
+                    "cssls",
 				},
 			})
 		end,
@@ -44,6 +45,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.cssls.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
