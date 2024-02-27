@@ -1,6 +1,13 @@
 return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
+	opts = {
+		formatters = {
+			prettier = {
+				prepend_args = { "--single-quote" },
+			},
+		},
+	},
 	config = function()
 		local conform = require("conform")
 		conform.setup({
