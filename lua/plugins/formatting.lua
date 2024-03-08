@@ -4,7 +4,7 @@ return {
 	opts = {
 		formatters = {
 			prettier = {
-				prepend_args = { "--single-quote" },
+				prepend_args = { "--single-quote", "--jsx-single-quote" },
 			},
 		},
 	},
