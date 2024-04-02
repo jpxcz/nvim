@@ -26,6 +26,7 @@ return {
 				python = { "isort", "black" },
 				go = { "goimports", "gofmt" },
 				dart = { "dart_format" },
+                terraform = { "terraformls" },
 			},
 
 			vim.keymap.set({ "n", "v" }, "<leader>i", function()

@@ -18,6 +18,8 @@ return {
 					"tsserver",
 					"gopls",
                     "cssls",
+                    "terraformls",
+                    "groovyls",
 				},
 			})
 		end,
@@ -48,6 +50,12 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.cssls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.terraformls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.groovyls.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
