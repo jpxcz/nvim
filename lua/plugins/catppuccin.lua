@@ -24,6 +24,7 @@ return {
                 custom_highlights = {
                     ["@variable"] = { fg = "#E5C07B" },
                     ["@keyword.export"] = { fg = "#C678DD" },
+                    ["NeoTreeCursorLine"] = { bg = "#3D3F4F" },
                 },
             })
             vim.cmd.colorscheme("catppuccin")
