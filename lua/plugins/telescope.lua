@@ -54,6 +54,7 @@ return {
 					},
 				},
 			})
+
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 			vim.keymap.set(
@@ -65,6 +66,7 @@ return {
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+            -- vim.keymap.set("n", "<leader>fs", "<Cmd>Telescope lsp_workspace_symbols query=vim.call('expand','<cword>')<CR>", {})
 
 			require("telescope").load_extension("ui-select")
 			require("telescope").load_extension("fzf")
