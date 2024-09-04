@@ -8,19 +8,20 @@ M.close_hover = function()
 	end
 end
 
--- Function to search for workspace symbols based on the word under the cursor
 M.search_workspace_symbol = function()
 	local query = vim.fn.expand("<cword>")
 	M.close_hover()
-	require("telescope.builtin").lsp_workspace_symbols({ query = query, file_ignore_patterns =  {} })
-	-- vim.lsp.buf.workspace_symbol(query)
+	require("telescope.builtin").lsp_workspace_symbols({
+		query = query,
+		file_ignore_patterns = { ".git" },
+		additional_args = function()
+			return { "--fixed-strings" }
+		end,
+	})
 end
 
--- Function to setup keybindings or any other initialization you want
 M.setup = function()
 	vim.keymap.set("n", "<leader>ws", ':lua require("word_finder").search_workspace_symbol()<CR>')
-
-    vim.api.nvim_set_keymap('n', '<leader>lw', ":lua list_workspace_folders()<CR>", { noremap = true, silent = true })
 end
 
 return M

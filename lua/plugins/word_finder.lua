@@ -1,5 +1,3 @@
--- return {}
-
 return {
     dir = "/Users/jp/.config/nvim/lua/word_finder",
     name = "word_finder",
