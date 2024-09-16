@@ -15,7 +15,7 @@ return {
 					"bashls",
 					"html",
 					"jsonls",
-					"tsserver",
+					"ts_ls",
 					"gopls",
                     "cssls",
                     "terraformls",
