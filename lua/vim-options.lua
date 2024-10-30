@@ -7,6 +7,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- remove hightlight of searched world
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
+-- pasting
+vim.keymap.set("n", "<leader>p", '"0p')
+
 -- diagnostic float text
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 

@@ -24,7 +24,7 @@ return {
 				graphql = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
-				go = { "goimports", "gofmt" },
+				go = { "goimports", "gofmt", "golines" },
 				dart = { "dart_format" },
                 terraform = { "terraformls" },
 			},
