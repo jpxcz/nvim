@@ -17,9 +17,10 @@ return {
 					"jsonls",
 					"ts_ls",
 					"gopls",
-                    "cssls",
-                    "terraformls",
-                    "groovyls",
+					"cssls",
+					"terraformls",
+					"groovyls",
+					"clangd",
 				},
 			})
 		end,
@@ -45,9 +46,9 @@ return {
 			})
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
-                cmd = { "gopls" },
-                filetypes = { "go", "gomod", "gowork", "gotmpl" },
-                root_dir = lspconfig.util.root_pattern("go.mod", ".git", "go.work"),
+				cmd = { "gopls" },
+				filetypes = { "go", "gomod", "gowork", "gotmpl" },
+				root_dir = lspconfig.util.root_pattern("go.mod", ".git", "go.work"),
 			})
 			lspconfig.jsonls.setup({
 				capabilities = capabilities,
@@ -60,6 +61,13 @@ return {
 			})
 			lspconfig.groovyls.setup({
 				capabilities = capabilities,
+			})
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+				cmd = {
+					"clangd",
+					"--fallback-style=webkit",
+				},
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
